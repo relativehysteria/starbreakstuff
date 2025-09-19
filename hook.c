@@ -16,6 +16,12 @@ void SDL_GetWindowSize(void* window, int *w, int *h) {
     // resize_window();
 }
 
+// This is the main SDL poll function. Good for checking keybinds and stuff
+uint32_t SDL_PollEvent(void* event) {
+    INIT_ORIG(SDL_PollEvent);
+    CALL_ORIG(orig(event), 0);
+}
+
 // void resize_window() {
 //     static bool resizing = false;
 //
@@ -29,7 +35,7 @@ void SDL_GetWindowSize(void* window, int *w, int *h) {
 //     // If we're in-game, re-center the screen
 //     if (strcmp(obj.name, "10GameClient") == 0) {
 //         // Force the game to recenter the screen
-//         void* world_client = *(void**)((char*)obj.ptr+0x80);
+//         void* world_client = *(void**)offset(obj.ptr, 0x80);
 //         reinitialize_offsets(world_client);
 //     }
 //
@@ -38,7 +44,7 @@ void SDL_GetWindowSize(void* window, int *w, int *h) {
 //
 // struct stage_object get_stage_object(void) {
 //     void* deref  = *stage;
-//     char* child  = (char*)deref+0x30;
+//     char* child  = (char*)offset(deref, 0x30);
 //
 //     struct stage_object obj;
 //     obj.ptr  = **(void***)child;
@@ -56,8 +62,8 @@ void SDL_GetWindowSize(void* window, int *w, int *h) {
 //
 // void reinitialize_offsets(void* world_client) {
 //     if (world_client) {
-//         void* world_view = *(void**)((char*)world_client+0x80);
-//         bool* offsets_initialized = (bool*)((char*)world_view+0xB8);
+//         void* world_view = *(void**)offset(world_client, 0x80);
+//         bool* offsets_initialized = (bool*)offset(world_view, 0xB8);
 //         *offsets_initialized = false;
 //
 //         (win_event_callback)(WE_SIZE_CHANGED, *user_data);

@@ -19,16 +19,17 @@ struct stage_object {
 
 // Library function definitions that we want to hook
 typedef void (*_windowEventCallback)(enum window_event, void*);
-// typedef void    (*_SDL_GetWindowSize)(void*, int*, int*);
+typedef uint32_t (*_SDL_PollEvent)(void* event);
+typedef void    (*_SDL_GetWindowSize)(void*, int*, int*);
 // typedef int32_t (*_SDL_Init)(uint32_t);
 // typedef void    (*_windowEventCallback)(enum window_event, void*);
 
 // Constant game pointers
-static _windowEventCallback win_event_callback = (_windowEventCallback)0x477e10;
-static void** user_data = (void**)0x847610;
+// static _windowEventCallback win_event_callback = (_windowEventCallback)0x477e10;
+// static void** user_data = (void**)0x847610;
+// static void** stage = (void**)0x82eeb8;
 static uint32_t* canvas_h = (uint32_t*)0x847418;
 static uint32_t* canvas_w = (uint32_t*)0x84741c;
-static void** stage = (void**)0x82eeb8;
 
 // Function signatures
 // void resize_window();
@@ -36,3 +37,4 @@ static void** stage = (void**)0x82eeb8;
 // char* get_class_name(void* obj);
 // void* find_orig(char* name);
 // void reinitialize_offsets(void* world_client);
+void* offset(void* ptr, ssize_t num) { return (void*)((char*)ptr + num); }
