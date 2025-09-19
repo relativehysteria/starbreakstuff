@@ -1,0 +1,268 @@
+offset size Stage
+0x0    0x48 ├── UIElementContainer : UIElementContainer
+0x0    0x30 │   ├── UIElement : UIElement
+0x0    0x8  │   │   ├── _vptr.UIElement : int (**)(void)
+0x8    0x8  │   │   ├── stage_ : Stage *
+0x10   0x8  │   │   ├── parent_ : UIElementContainer *
+0x18   0x1  │   │   ├── show_ : bool
+0x19   0x1  │   │   ├── isModal_ : bool
+0x1A   0x1  │   │   ├── isSelected_ : bool
+0x1B   0x1  │   │   ├── containsMouse_ : bool
+0x1C   0x4  │   │   ├── x_ : int
+0x20   0x4  │   │   ├── y_ : int
+0x24   0x4  │   │   ├── w_ : int
+0x28   0x4  │   │   ├── h_ : int
+0x2C   0x4  │   │   └ [TRAILING PADDING]
+0x30   0x18 │   └── children_ : std::vector<UIElement*, std::allocator<UIElement*> >
+0x30   0x18 │       └── std::_Vector_base<UIElement*, std::allocator<UIElement*> > : std::_Vector_base<UIElement*, std::allocator<UIElement*> >
+0x30   0x18 │           └── _M_impl : std::_Vector_base<UIElement*, std::allocator<UIElement*> >::_Vector_impl
+0x30   0x1  │               ├── std::allocator<UIElement*> : std::allocator<UIElement*>
+0x30   0x1  │               │   └── __gnu_cxx::new_allocator<UIElement*> : __gnu_cxx::new_allocator<UIElement*>
+0x30   0x1  │               │       └ [TRAILING PADDING]
+0x30   0x8  │               ├── _M_start : UIElement **
+0x38   0x8  │               ├── _M_finish : UIElement **
+0x40   0x8  │               └── _M_end_of_storage : UIElement **
+0x48   0x4  ├── backgroundColor_ : unsigned int
+0x4C   0x4  ├ [PADDING]
+0x50   0x30 ├── gamepads_ : std::unordered_map<int, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::hash<int>, std::equal_to<int>, std::allocator<std::pair<int const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >
+0x50   0x1  │   ├── std::__allow_copy_cons<true> : std::__allow_copy_cons<true>
+0x50   0x1  │   │   └ [TRAILING PADDING]
+0x50   0x30 │   └── _M_h : std::_Hashtable<int, std::pair<int const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<int const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >
+0x80   0x4  ├── lastTimeMS_ : int
+0x84   0x4  ├ [PADDING]
+0x88   0x8  ├── textInputTarget_ : UIElement *
+0x90   0x1  ├── done_ : bool
+0x91   0x7  └ [TRAILING PADDING]
+
+
+offset size GameClient
+0x0    0x48 ├── UIElementContainer : UIElementContainer
+0x0    0x30 │   ├── UIElement : UIElement
+0x0    0x8  │   │   ├── _vptr.UIElement : int (**)(void)
+0x8    0x8  │   │   ├── stage_ : Stage *
+0x10   0x8  │   │   ├── parent_ : UIElementContainer *
+0x18   0x1  │   │   ├── show_ : bool
+0x19   0x1  │   │   ├── isModal_ : bool
+0x1A   0x1  │   │   ├── isSelected_ : bool
+0x1B   0x1  │   │   ├── containsMouse_ : bool
+0x1C   0x4  │   │   ├── x_ : int
+0x20   0x4  │   │   ├── y_ : int
+0x24   0x4  │   │   ├── w_ : int
+0x28   0x4  │   │   ├── h_ : int
+0x2C   0x4  │   │   └ [TRAILING PADDING]
+0x30   0x18 │   └── children_ : std::vector<UIElement*, std::allocator<UIElement*> >
+0x30   0x18 │       └── std::_Vector_base<UIElement*, std::allocator<UIElement*> > : std::_Vector_base<UIElement*, std::allocator<UIElement*> >
+0x30   0x18 │           └── _M_impl : std::_Vector_base<UIElement*, std::allocator<UIElement*> >::_Vector_impl
+0x30   0x1  │               ├── std::allocator<UIElement*> : std::allocator<UIElement*>
+0x30   0x1  │               │   └── __gnu_cxx::new_allocator<UIElement*> : __gnu_cxx::new_allocator<UIElement*>
+0x30   0x1  │               │       └ [TRAILING PADDING]
+0x30   0x8  │               ├── _M_start : UIElement **
+0x38   0x8  │               ├── _M_finish : UIElement **
+0x40   0x8  │               └── _M_end_of_storage : UIElement **
+0x48   0x20 ├── onDone_ : Handler<>
+0x48   0x4  │   ├── nextId_ : int
+0x4C   0x4  │   └ [PADDING]
+0x50   0x18 │   └── cbs_ : std::vector<Handler<>::Callback, std::allocator<Handler<>::Callback> >
+0x50   0x18 │       └── std::_Vector_base<Handler<>::Callback, std::allocator<Handler<>::Callback> > : std::_Vector_base<Handler<>::Callback, std::allocator<Handler<>::Callback> >
+0x50   0x18 │           └── _M_impl : std::_Vector_base<Handler<>::Callback, std::allocator<Handler<>::Callback> >::_Vector_impl
+0x50   0x1  │               ├── std::allocator<Handler<>::Callback> : std::allocator<Handler<>::Callback>
+0x50   0x1  │               │   └── __gnu_cxx::new_allocator<Handler<>::Callback> : __gnu_cxx::new_allocator<Handler<>::Callback>
+0x50   0x1  │               │       └ [TRAILING PADDING]
+0x50   0x8  │               ├── _M_start : Handler<>::Callback *
+0x58   0x8  │               ├── _M_finish : Handler<>::Callback *
+0x60   0x8  │               └── _M_end_of_storage : Handler<>::Callback *
+0x68   0x8  ├── clientStats_ : ClientStats *
+0x70   0x8  ├── serverConnection_ : ServerConnection *
+0x78   0x1  ├── isAdmin_ : bool
+0x79   0x7  ├ [PADDING]
+0x80   0x8  ├── worldClient_ : WorldClient *
+0x88   0x8  ├── loadingScreen_ : LoadingScreen *
+0x90   0x8  ├── chatLog_ : ChatLog *
+0x98   0x8  ├── chatWindow_ : ChatWindow *
+0xA0   0x8  ├── chatInput_ : ChatInput *
+0xA8   0x8  ├── perfDisplay_ : PerfDisplay *
+0xB0   0x8  ├── gameDest_ : GameDest *
+0xB8   0x8  ├── gameKey_ : std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+0xC0   0x4  ├── accountInUseRetries_ : int
+0xC4   0x4  ├── sinceKeypress_ : int
+0xC8   0x4  ├── lastEmoteT_ : int
+0xCC   0x4  └ [TRAILING PADDING]
+
+
+offset size WorldClient
+0x0    0x48 ├── UIElementContainer : UIElementContainer
+0x0    0x30 │   ├── UIElement : UIElement
+0x0    0x8  │   │   ├── _vptr.UIElement : int (**)(void)
+0x8    0x8  │   │   ├── stage_ : Stage *
+0x10   0x8  │   │   ├── parent_ : UIElementContainer *
+0x18   0x1  │   │   ├── show_ : bool
+0x19   0x1  │   │   ├── isModal_ : bool
+0x1A   0x1  │   │   ├── isSelected_ : bool
+0x1B   0x1  │   │   ├── containsMouse_ : bool
+0x1C   0x4  │   │   ├── x_ : int
+0x20   0x4  │   │   ├── y_ : int
+0x24   0x4  │   │   ├── w_ : int
+0x28   0x4  │   │   ├── h_ : int
+0x2C   0x4  │   │   └ [TRAILING PADDING]
+0x30   0x18 │   └── children_ : std::vector<UIElement*, std::allocator<UIElement*> >
+0x30   0x18 │       └── std::_Vector_base<UIElement*, std::allocator<UIElement*> > : std::_Vector_base<UIElement*, std::allocator<UIElement*> >
+0x30   0x18 │           └── _M_impl : std::_Vector_base<UIElement*, std::allocator<UIElement*> >::_Vector_impl
+0x30   0x1  │               ├── std::allocator<UIElement*> : std::allocator<UIElement*>
+0x30   0x1  │               │   └── __gnu_cxx::new_allocator<UIElement*> : __gnu_cxx::new_allocator<UIElement*>
+0x30   0x1  │               │       └ [TRAILING PADDING]
+0x30   0x8  │               ├── _M_start : UIElement **
+0x38   0x8  │               ├── _M_finish : UIElement **
+0x40   0x8  │               └── _M_end_of_storage : UIElement **
+0x48   0x20 ├── onChatError_ : Handler<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >
+0x48   0x4  │   ├── nextId_ : int
+0x4C   0x4  │   └ [PADDING]
+0x50   0x18 │   └── cbs_ : std::vector<Handler<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::Callback, std::allocator<Handler<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::Callback> >
+0x50   0x18 │       └── std::_Vector_base<Handler<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::Callback, std::allocator<Handler<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::Callback> > : std::_Vector_base<Handler<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::Callback, std::allocator<Handler<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::Callback> >
+0x50   0x18 │           └── _M_impl : std::_Vector_base<Handler<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::Callback, std::allocator<Handler<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::Callback> >::_Vector_impl
+0x50   0x1  │               ├── std::allocator<Handler<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::Callback> : std::allocator<Handler<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::Callback>
+0x50   0x1  │               │   └── __gnu_cxx::new_allocator<Handler<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::Callback> : __gnu_cxx::new_allocator<Handler<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::Callback>
+0x50   0x1  │               │       └ [TRAILING PADDING]
+0x50   0x8  │               ├── _M_start : Handler<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::Callback *
+0x58   0x8  │               ├── _M_finish : Handler<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::Callback *
+0x60   0x8  │               └── _M_end_of_storage : Handler<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::Callback *
+0x68   0x30 ├── achievements_ : std::unordered_set<Achievement, std::hash<int>, std::equal_to<Achievement>, std::allocator<Achievement> >
+0x68   0x1  │   ├── std::__allow_copy_cons<true> : std::__allow_copy_cons<true>
+0x68   0x1  │   │   └ [TRAILING PADDING]
+0x68   0x30 │   └── _M_h : std::_Hashtable<Achievement, Achievement, std::allocator<Achievement>, std::__detail::_Identity, std::equal_to<Achievement>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, true, true> >
+0x68   0x8  ├── serverConnection_ : ServerConnection *
+0x70   0x1  ├── isAdmin_ : bool
+0x74   0x4  ├── lastUpdate_ : int
+0x78   0x8  ├── clientWorld_ : ClientWorld *
+0x80   0x8  ├── worldView_ : WorldView *
+0x88   0x8  ├── hud_ : HUD *
+0x90   0x8  ├── overlay_ : WorldOverlay *
+0x98   0x8  ├── worldTitle_ : WorldTitle *
+0xA0   0x8  ├── scratch_ : std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+0xA8   0x48 └── scratchDelta_ : Delta
+0xA8   0x0      ├── google::protobuf::MessageLite : google::protobuf::MessageLite
+0xA8   0x4      ├── kCreateSubWorldFieldNumber : const int
+0xAC   0x4      ├── kDestroySubWorldFieldNumber : const int
+0xB0   0x4      ├── kWorldUpdateFieldNumber : const int
+0xB4   0x4      ├── kCreatePlayerFieldNumber : const int
+0xB8   0x4      ├── kCreateLootFieldNumber : const int
+0xBC   0x4      ├── kStatBoostFieldNumber : const int
+0xC0   0x4      ├── kStateRequestedFieldNumber : const int
+0xB0   0x8      ├── createsubworld_ : CreateSubWorld *
+0xB8   0x8      ├── destroysubworld_ : DestroySubWorld *
+0xC0   0x8      ├── worldupdate_ : WorldUpdate *
+0xC8   0x8      ├── createplayer_ : CreatePlayer *
+0xD0   0x8      ├── createloot_ : CreateLoot *
+0xD8   0x8      ├── statboost_ : StatBoost *
+0xE0   0x1      ├── staterequested_ : bool
+0xE1   0x3      ├ [PADDING]
+0xE4   0x4      ├── _cached_size_ : int
+0xE8   0x4      ├── _has_bits_ : unsigned int [1]
+0xEC   0x8      └── default_instance_ : Delta *
+
+
+offset size  WorldView
+0x0    0x30  ├── UIElement : UIElement
+0x0    0x8   │   ├── _vptr.UIElement : int (**)(void)
+0x8    0x8   │   ├── stage_ : Stage *
+0x10   0x8   │   ├── parent_ : UIElementContainer *
+0x18   0x1   │   ├── show_ : bool
+0x19   0x1   │   ├── isModal_ : bool
+0x1A   0x1   │   ├── isSelected_ : bool
+0x1B   0x1   │   ├── containsMouse_ : bool
+0x1C   0x4   │   ├── x_ : int
+0x20   0x4   │   ├── y_ : int
+0x24   0x4   │   ├── w_ : int
+0x28   0x4   │   ├── h_ : int
+0x2C   0x4   │   └ [TRAILING PADDING]
+0x30   0x8   ├── world_ : ClientWorld *
+0x38   0x4   ├── addCBId_ : int
+0x3C   0x4   ├── removeCBId_ : int
+0x40   0x4   ├── damageCBId_ : int
+0x44   0x4   ├── trailCBId_ : int
+0x48   0x4   ├── boostCBId_ : int
+0x4C   0x4   ├── mkUpCBId_ : int
+0x50   0x4   ├── playSoundCBId_ : int
+0x54   0x4   ├── shakeCBId_ : int
+0x58   0x4   ├── flashCBId_ : int
+0x5C   0x4   ├── runAnimCBId_ : int
+0x60   0x4   ├── userLinksCBId_ : int
+0x64   0x1   ├── recalculateWorldBounds_ : bool
+0x65   0x1   ├── rebuildTiles_ : bool
+0x66   0x2   ├ [PADDING]
+0x68   0x10  ├── worldBounds_ : Rectangle<int>
+0x78   0x10  ├── playerBounds_ : Rectangle<int>
+0x88   0x8   ├── tileMap_ : TileMap *
+0x90   0x8   ├── tiles60_ : Tiles *
+0x98   0x8   ├── tiles70_ : Tiles *
+0xA0   0x18  ├── uniforms_ : std::vector<Uniform*, std::allocator<Uniform*> >
+0xA0   0x18  │   └── std::_Vector_base<Uniform*, std::allocator<Uniform*> > : std::_Vector_base<Uniform*, std::allocator<Uniform*> >
+0xA0   0x18  │       └── _M_impl : std::_Vector_base<Uniform*, std::allocator<Uniform*> >::_Vector_impl
+0xA0   0x1   │           ├── std::allocator<Uniform*> : std::allocator<Uniform*>
+0xA0   0x1   │           │   └── __gnu_cxx::new_allocator<Uniform*> : __gnu_cxx::new_allocator<Uniform*>
+0xA0   0x1   │           │       └ [TRAILING PADDING]
+0xA0   0x8   │           ├── _M_start : Uniform **
+0xA8   0x8   │           ├── _M_finish : Uniform **
+0xB0   0x8   │           └── _M_end_of_storage : Uniform **
+0xB8   0x1   ├── offsetsInitialized_ : bool
+0xB9   0x3   ├ [PADDING]
+0xBC   0x8   ├── offset_ : Point<int>
+0xC4   0x8   ├── currOffset_ : Point<int>
+0xCC   0x8   ├── goalOffset_ : Point<int>
+0xD4   0x8   ├── targetPos_ : Point<int>
+0xDC   0x4   ├── nextViewId_ : int
+0xE0   0x8   ├── graphicGrid_ : Grid<Graphic> *
+0xE8   0x18  ├── dynamicGraphics_ : std::vector<DynamicGraphic*, std::allocator<DynamicGraphic*> >
+0xE8   0x18  │   └── std::_Vector_base<DynamicGraphic*, std::allocator<DynamicGraphic*> > : std::_Vector_base<DynamicGraphic*, std::allocator<DynamicGraphic*> >
+0xE8   0x18  │       └── _M_impl : std::_Vector_base<DynamicGraphic*, std::allocator<DynamicGraphic*> >::_Vector_impl
+0xE8   0x1   │           ├── std::allocator<DynamicGraphic*> : std::allocator<DynamicGraphic*>
+0xE8   0x1   │           │   └── __gnu_cxx::new_allocator<DynamicGraphic*> : __gnu_cxx::new_allocator<DynamicGraphic*>
+0xE8   0x1   │           │       └ [TRAILING PADDING]
+0xE8   0x8   │           ├── _M_start : DynamicGraphic **
+0xF0   0x8   │           ├── _M_finish : DynamicGraphic **
+0xF8   0x8   │           └── _M_end_of_storage : DynamicGraphic **
+0x100  0x30  ├── namedGraphics_ : std::unordered_map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::vector<Graphic*, std::allocator<Graphic*> >, std::hash<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::equal_to<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::vector<Graphic*, std::allocator<Graphic*> > > > >
+0x100  0x1   │   ├── std::__allow_copy_cons<true> : std::__allow_copy_cons<true>
+0x100  0x1   │   │   └ [TRAILING PADDING]
+0x100  0x30  │   └── _M_h : std::_Hashtable<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::vector<Graphic*, std::allocator<Graphic*> > >, std::allocator<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::vector<Graphic*, std::allocator<Graphic*> > > >, std::__detail::_Select1st, std::equal_to<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >
+0x130  0x18  ├── fills_ : std::vector<WorldView::Fill, std::allocator<WorldView::Fill> >
+0x130  0x18  │   └── std::_Vector_base<WorldView::Fill, std::allocator<WorldView::Fill> > : std::_Vector_base<WorldView::Fill, std::allocator<WorldView::Fill> >
+0x130  0x18  │       └── _M_impl : std::_Vector_base<WorldView::Fill, std::allocator<WorldView::Fill> >::_Vector_impl
+0x130  0x1   │           ├── std::allocator<WorldView::Fill> : std::allocator<WorldView::Fill>
+0x130  0x1   │           │   └── __gnu_cxx::new_allocator<WorldView::Fill> : __gnu_cxx::new_allocator<WorldView::Fill>
+0x130  0x1   │           │       └ [TRAILING PADDING]
+0x130  0x8   │           ├── _M_start : WorldView::Fill *
+0x138  0x8   │           ├── _M_finish : WorldView::Fill *
+0x140  0x8   │           └── _M_end_of_storage : WorldView::Fill *
+0x148  0x4   ├── lastSubWorldT_ : int
+0x14C  0x4   ├── shakeMagnitude_ : int
+0x150  0x4   ├── shakePos_ : int
+0x154  0x4   ├── shakeDuration_ : int
+0x158  0x4   ├── flashStart_ : int
+0x15C  0x4   ├── flashHold_ : int
+0x160  0x4   ├── flashEnd_ : int
+0x164  0x4   ├── flashPos_ : int
+0x168  0x4   ├── flashColor_ : unsigned int
+0x16C  0x4   ├ [PADDING]
+0x170  0x30  ├── emotes_ : std::unordered_map<ObjKey, std::deque<EmoteIcon*, std::allocator<EmoteIcon*> >, std::hash<ObjKey>, std::equal_to<ObjKey>, std::allocator<std::pair<ObjKey const, std::deque<EmoteIcon*, std::allocator<EmoteIcon*> > > > >
+0x170  0x1   │   ├── std::__allow_copy_cons<true> : std::__allow_copy_cons<true>
+0x170  0x1   │   │   └ [TRAILING PADDING]
+0x170  0x30  │   └── _M_h : std::_Hashtable<ObjKey, std::pair<ObjKey const, std::deque<EmoteIcon*, std::allocator<EmoteIcon*> > >, std::allocator<std::pair<ObjKey const, std::deque<EmoteIcon*, std::allocator<EmoteIcon*> > > >, std::__detail::_Select1st, std::equal_to<ObjKey>, std::hash<ObjKey>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >
+0x1A0  0x30  ├── graphics_ : std::unordered_set<Graphic*, std::hash<Graphic*>, std::equal_to<Graphic*>, std::allocator<Graphic*> >
+0x1A0  0x1   │   ├── std::__allow_copy_cons<true> : std::__allow_copy_cons<true>
+0x1A0  0x1   │   │   └ [TRAILING PADDING]
+0x1A0  0x30  │   └── _M_h : std::_Hashtable<Graphic*, Graphic*, std::allocator<Graphic*>, std::__detail::_Identity, std::equal_to<Graphic*>, std::hash<Graphic*>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, true, true> >
+0x1D0  0x18  ├── das_ : std::vector<WorldView::Drawable, std::allocator<WorldView::Drawable> >
+0x1D0  0x18  │   └── std::_Vector_base<WorldView::Drawable, std::allocator<WorldView::Drawable> > : std::_Vector_base<WorldView::Drawable, std::allocator<WorldView::Drawable> >
+0x1D0  0x18  │       └── _M_impl : std::_Vector_base<WorldView::Drawable, std::allocator<WorldView::Drawable> >::_Vector_impl
+0x1D0  0x1   │           ├── std::allocator<WorldView::Drawable> : std::allocator<WorldView::Drawable>
+0x1D0  0x1   │           │   └── __gnu_cxx::new_allocator<WorldView::Drawable> : __gnu_cxx::new_allocator<WorldView::Drawable>
+0x1D0  0x1   │           │       └ [TRAILING PADDING]
+0x1D0  0x8   │           ├── _M_start : WorldView::Drawable *
+0x1D8  0x8   │           ├── _M_finish : WorldView::Drawable *
+0x1E0  0x8   │           └── _M_end_of_storage : WorldView::Drawable *
+0x1E8  0x10  ├── nsPRNG_ : PRNG
+0x1E8  0x4   │   ├── w_ : unsigned int
+0x1EC  0x4   │   ├── x_ : unsigned int
+0x1F0  0x4   │   ├── y_ : unsigned int
+0x1F4  0x4   │   └── z_ : unsigned int
+0x1F8  0x30  └── nameTextureCache_ : std::unordered_map<unsigned long, TextTexture*, std::hash<unsigned long>, std::equal_to<unsigned long>, std::allocator<std::pair<unsigned long const, TextTexture*> > >
