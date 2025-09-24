@@ -1,5 +1,10 @@
 #pragma once
 
+#include <dlfcn.h>
+#include <stdio.h>
+
+void* find_orig(char* name);
+
 #define LOG(fmt, ...) \
     fprintf(stderr, "[hook|%s] " fmt "\n", __func__, ##__VA_ARGS__)
 
