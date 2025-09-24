@@ -1,2 +1,0 @@
-#!/bin/fish
-clang -Wall -O2 -fPIC -shared -o hook.so ./src/hook.c -ldl && cp ./hook.so /steam
