@@ -11,6 +11,7 @@ uint32_t OVERRIDE_HEIGHT = BASE_HEIGHT;
 void zoom_in()  { apply_zoom(+ZOOM_STEP); }
 void zoom_out() { apply_zoom(-ZOOM_STEP); }
 
+// Apply a zoom step to adjust screen dimensions
 void apply_zoom(float step) {
     static float zoom_factor = 1.0f;
 
@@ -29,6 +30,7 @@ void apply_zoom(float step) {
            zoom_factor, OVERRIDE_WIDTH, OVERRIDE_HEIGHT);
 }
 
+// Trigger a window resize event and re-center the screen
 void resize_window() {
     static bool resizing = false;
 
@@ -49,6 +51,7 @@ void resize_window() {
     resizing = false;
 }
 
+// Get the current game object stored in the global stage object
 struct stage_object get_stage_object(void) {
     void* deref  = *STAGE;
     char* child  = (char*)offset(deref, 0x30);
@@ -60,6 +63,7 @@ struct stage_object get_stage_object(void) {
     return obj;
 }
 
+// Get the class name of an object assuming gcc layout
 char* get_class_name(void* obj) {
     void*** vtable   = *(void****)obj;
     void**  typeinfo = *(vtable-1);
@@ -67,6 +71,7 @@ char* get_class_name(void* obj) {
     return name;
 }
 
+// Reinitialize the game offsets and re-center the window
 void reinitialize_offsets(void* world_client) {
     if (world_client) {
         void* world_view = *(void**)offset(world_client, 0x80);
