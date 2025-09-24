@@ -63,14 +63,6 @@ struct stage_object get_stage_object(void) {
     return obj;
 }
 
-// Get the class name of an object assuming gcc layout
-char* get_class_name(void* obj) {
-    void*** vtable   = *(void****)obj;
-    void**  typeinfo = *(vtable-1);
-    void*   name     = *(typeinfo+1);
-    return name;
-}
-
 // Reinitialize the game offsets and re-center the window
 void reinitialize_offsets(void* world_client) {
     if (world_client) {

@@ -4,3 +4,4 @@
 
 float clamp(float val, float min, float max);
 void* offset(void* ptr, ssize_t num);
+char* get_class_name(void* obj);
