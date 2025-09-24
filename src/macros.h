@@ -3,7 +3,7 @@
 #include <dlfcn.h>
 #include <stdio.h>
 
-void* find_orig(char* name);
+static void* find_orig(char* name);
 
 #define LOG(fmt, ...) \
     fprintf(stderr, "[hook|%s] " fmt "\n", __func__, ##__VA_ARGS__)
@@ -31,7 +31,7 @@ void* find_orig(char* name);
         orig = (_##name)find_orig(#name); \
     }                                     \
 
-void* find_orig(char* name) {
+inline void* find_orig(char* name) {
     void* orig = dlsym(RTLD_NEXT, name);
 
     if (!orig) {

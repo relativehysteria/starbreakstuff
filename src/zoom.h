@@ -1,8 +1,8 @@
 #pragma once
 
-const float ZOOM_STEP = 0.1;
-const float ZOOM_MIN  = 0.1;
-const float ZOOM_MAX  = 5.0;
+static const float ZOOM_STEP = 0.1;
+static const float ZOOM_MIN  = 0.1;
+static const float ZOOM_MAX  = 5.0;
 
 static const uint32_t BASE_WIDTH  = 1920;
 static const uint32_t BASE_HEIGHT = 1080;
