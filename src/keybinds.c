@@ -3,6 +3,11 @@
 #include "macros.h"
 #include "keybinds.h"
 
+const struct Keybind keybinds[] = {
+    { 'q', KMOD_CTRL, zoom_out },
+    { 'e', KMOD_CTRL, zoom_in },
+};
+
 // Handle registered keybinds
 void handle_keybinds(uint32_t* event) {
     // Only handle pressed keys

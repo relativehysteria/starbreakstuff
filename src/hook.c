@@ -7,8 +7,10 @@
 #include "macros.h"
 #include "sdl.h"
 #include "keybinds.h"
+#include "zoom.h"
 
 void SDL_GetWindowSize(void* window, int *w, int *h) {
+    LOG("%x %x", OVERRIDE_WIDTH, OVERRIDE_HEIGHT);
     *w = OVERRIDE_WIDTH;
     *h = OVERRIDE_HEIGHT;
     *CANVAS_W = *w;

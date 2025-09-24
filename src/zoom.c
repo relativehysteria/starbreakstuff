@@ -5,6 +5,9 @@
 #include "hook.h"
 #include "util.h"
 
+uint32_t OVERRIDE_WIDTH  = BASE_WIDTH;
+uint32_t OVERRIDE_HEIGHT = BASE_HEIGHT;
+
 void zoom_in()  { apply_zoom(+ZOOM_STEP); }
 void zoom_out() { apply_zoom(-ZOOM_STEP); }
 
@@ -17,6 +20,10 @@ void apply_zoom(float step) {
     // Override the display dimensions
     OVERRIDE_WIDTH  = (uint32_t)(BASE_WIDTH  * zoom_factor);
     OVERRIDE_HEIGHT = (uint32_t)(BASE_HEIGHT * zoom_factor);
+    LOG("%x %x", OVERRIDE_WIDTH, OVERRIDE_HEIGHT);
+
+    // Trigger a window resize event
+    resize_window();
 
     LOG("Zoom factor: %.2f, New dimensions: %u x %u",
            zoom_factor, OVERRIDE_WIDTH, OVERRIDE_HEIGHT);
