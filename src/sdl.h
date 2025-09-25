@@ -2,8 +2,8 @@
 
 #include <stdint.h>
 
-static const uint32_t KEY_DOWN = 0x300;
-static const uint32_t KEY_UP   = 0x301;
+#define KEY_DOWN 0x300
+#define KEY_UP   0x301
 
 enum Keymod {
     KMOD_NONE   = 0x0000,
